@@ -73,13 +73,13 @@ imc-dispatcher-5f9565cdbd-rmwlr        1/1     Running   0          12m
 1. Run `IoTCLI ceph setup` to provision ceph 
 - This will tak some time for all the resources to become available 
 
-2.Run `IoTCLI ceph user <ceph username` to setup a new ceph user connected to credential store `my-store`
+2.Run `IoTCLI ceph user <ceph username>` to setup a new ceph user connected to credential store `my-store`
 
 3.Run `IoTCLI ceph secrets <ceph username>` to get the login secrets for your ceph instance and the endpoint name, these will be used later. 
 
 ### Setup the Tensorflow Serving Deployments 
 
-1. Run `IoTCLI tensorflowServing setup` Which will spin up the tensorflow serving pod 
+1. Run `IoTCLI tensorflowServing setup -n kafka` Which will spin up the tensorflow serving pod 
 
 ### Deploy the `Video Analytics` knative service 
 
